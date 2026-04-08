@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -20,14 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
-        <SmoothScroll>
-          <ScrollProgress />
-          <Navbar />
-          <main className="flex-grow pt-20">{children}</main>
-          <Footer />
-        </SmoothScroll>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
+        <ScrollProgress />
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

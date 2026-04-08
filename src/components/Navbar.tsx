@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center">
             <Link href="/contact" className="text-sm font-bold bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors shadow-md">
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </div>
 
@@ -116,7 +116,7 @@ export default function Navbar() {
             className="pt-8"
           >
             <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full block text-center rounded-2xl bg-blue-600 text-white font-bold py-4 text-xl shadow-xl shadow-blue-500/20">
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </motion.div>
         </div>
